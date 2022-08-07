@@ -1,0 +1,23 @@
+.menubar {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    height: 24px;
+    opacity: 0.9;
+    color: black;
+}
+
+.menu {
+    width: fit-content;
+    padding: 0 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid black;
+}
+
+.hidden {
+    display: none;
+}
+
+.time {
+    margin: 0;
+}
