@@ -1,17 +1,21 @@
+@import 'src/theme/variables.scss';
+
 .menubar {
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
     background-color: #FFFFFF;
     height: 24px;
     opacity: 0.9;
     color: black;
+    padding: 0 14px;
 }
 
 .menu {
     width: fit-content;
-    padding: 0 0.5rem;
+    padding: 0 14px;
     margin: 0.5rem 0;
-    border: 1px solid black;
+    border: 1px solid $black;
+    background-color: $dropdown-color;
 }
 
 .hidden {
