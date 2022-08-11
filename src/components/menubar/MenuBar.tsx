@@ -11,7 +11,7 @@ const MenuBar = () => {
 
   return (
     <div className={styles.menubar}>
-      <button onClick={setIsOpen}>
+      <button className={styles.icon} onClick={setIsOpen}>
         <img src={svg} alt="apple logo"></img>
       </button>
       <div className={`switch ${isOpen ? styles.menu : styles.hidden}`}>
