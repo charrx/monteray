@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/monteray/static/css/main.3c0c3a88.css",
+    "main.js": "/monteray/static/js/main.55c3bf21.js",
+    "static/js/787.20d412da.chunk.js": "/monteray/static/js/787.20d412da.chunk.js",
+    "static/media/pinkwallpaper.jpg": "/monteray/static/media/pinkwallpaper.c680f25c346dfc77f3c9.jpg",
+    "static/media/appleicon.svg": "/monteray/static/media/appleicon.62171e3b6d072008e2eed91d03a29c92.svg",
+    "index.html": "/monteray/index.html",
+    "main.3c0c3a88.css.map": "/monteray/static/css/main.3c0c3a88.css.map",
+    "main.55c3bf21.js.map": "/monteray/static/js/main.55c3bf21.js.map",
+    "787.20d412da.chunk.js.map": "/monteray/static/js/787.20d412da.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c0c3a88.css",
+    "static/js/main.55c3bf21.js"
+  ]
+}
