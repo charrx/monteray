@@ -1,4 +1,4 @@
-import Dock from "./components/dock/Dock";
+import Dock from "./components/Dock/Dock";
 import MenuBar from "./components/menubar/MenuBar";
 import styles from "./styles/App.module.scss";
 
