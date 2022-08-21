@@ -1,15 +1,19 @@
+import { useContext } from "react";
 import styles from "./Menu.module.scss";
 
 interface Props {
   isOpen: boolean;
+  handleContext: () => void;
 }
 
-const Menu = ({ isOpen }: Props) => {
+const Menu = ({ isOpen, handleContext }: Props) => {
   return (
     <div className={`switch ${isOpen ? styles.menu : styles.hidden}`}>
       <p>About this mac</p>
       <hr></hr>
-      <p>Lock screen</p>
+      <button onClick={handleContext}>
+        <p>Lock screen</p>
+      </button>
     </div>
   );
 };

@@ -1,10 +1,22 @@
+import { useState } from "react";
 import Desktop from "./Context/Desktop";
+import LockScreen from "./Context/LockScreen";
 
 function App() {
+  const [isUnlocked, setIsUnlocked] = useState(false);
+
+  const handleContext = () => {
+    setIsUnlocked(!isUnlocked);
+  };
+
   return (
-    <div className="w-full h-full bg-[url('./assets/images/pinkwallpaper.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden relative">
-      <Desktop></Desktop>
-    </div>
+    <>
+      {isUnlocked ? (
+        <Desktop handleContext={handleContext} />
+      ) : (
+        <LockScreen handleContext={handleContext} />
+      )}
+    </>
   );
 }
 
