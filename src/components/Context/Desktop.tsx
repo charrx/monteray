@@ -1,5 +1,5 @@
 import Dock from "../Dock/Dock";
-import MenuBar from "../menubar/MenuBar";
+import MenuBar from "../Menubar/MenuBar";
 
 interface Props {
   handleAppContext: () => void;

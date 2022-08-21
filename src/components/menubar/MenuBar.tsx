@@ -1,7 +1,7 @@
 import { useReducer } from "react";
 import styles from "./MenuBar.module.scss";
 import svg from "../../assets/images/appleicon.svg";
-import Menu from "../menu/Menu";
+import Menu from "../Menu/Menu";
 
 interface Props {
   handleAppContext: () => void;
