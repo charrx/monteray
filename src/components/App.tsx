@@ -5,16 +5,16 @@ import LockScreen from "./Context/LockScreen";
 function App() {
   const [isUnlocked, setIsUnlocked] = useState(false);
 
-  const handleContext = () => {
+  const handleAppContext = () => {
     setIsUnlocked(!isUnlocked);
   };
 
   return (
     <>
       {isUnlocked ? (
-        <Desktop handleContext={handleContext} />
+        <Desktop handleAppContext={handleAppContext} />
       ) : (
-        <LockScreen handleContext={handleContext} />
+        <LockScreen handleAppContext={handleAppContext} />
       )}
     </>
   );

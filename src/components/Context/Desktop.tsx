@@ -2,13 +2,13 @@ import Dock from "../Dock/Dock";
 import MenuBar from "../menubar/MenuBar";
 
 interface Props {
-  handleContext: () => void;
+  handleAppContext: () => void;
 }
 
-const Desktop = ({ handleContext }: Props) => {
+const Desktop = ({ handleAppContext }: Props) => {
   return (
     <div className="w-full h-full bg-[url('./assets/images/desktop.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden relative">
-      <MenuBar handleContext={handleContext}></MenuBar>
+      <MenuBar handleAppContext={handleAppContext}></MenuBar>
       <Dock></Dock>
     </div>
   );

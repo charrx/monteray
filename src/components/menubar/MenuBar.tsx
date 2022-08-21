@@ -4,10 +4,10 @@ import svg from "../../assets/images/appleicon.svg";
 import Menu from "../menu/Menu";
 
 interface Props {
-  handleContext: () => void;
+  handleAppContext: () => void;
 }
 
-const MenuBar = ({ handleContext }: Props) => {
+const MenuBar = ({ handleAppContext }: Props) => {
   const [isOpen, setIsOpen] = useReducer((isOpen) => !isOpen, false);
 
   return (
@@ -16,7 +16,7 @@ const MenuBar = ({ handleContext }: Props) => {
         <img src={svg} alt="apple logo"></img>
       </button>
 
-      <Menu isOpen={isOpen} handleContext={handleContext} />
+      <Menu isOpen={isOpen} handleAppContext={handleAppContext} />
     </div>
   );
 };

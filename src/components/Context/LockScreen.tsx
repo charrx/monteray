@@ -1,14 +1,14 @@
 interface Props {
-  handleContext: () => void;
+  handleAppContext: () => void;
 }
 
-const LockScreen = ({ handleContext }: Props) => {
+const LockScreen = ({ handleAppContext }: Props) => {
   const adminPassword = "admin";
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     if (value === adminPassword) {
-      handleContext();
+      handleAppContext();
     }
   };
 
