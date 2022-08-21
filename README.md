@@ -12,3 +12,5 @@ This is a replica of the macOS Monterey called Monteray(hehe), but presented in 
 I used [Create React App](https://github.com/facebook/create-react-app) for this project.
 
 I did it to kickstart my React experience and it felt easier to learn by doing.
+
+You can check it out here: [https://charrx.github.io/monteray/](https://charrx.github.io/monteray/).
