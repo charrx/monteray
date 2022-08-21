@@ -16,7 +16,6 @@ const MenuBar = ({ handleContext }: Props) => {
         <img src={svg} alt="apple logo"></img>
       </button>
 
-      {/* implement menu component */}
       <Menu isOpen={isOpen} handleContext={handleContext} />
     </div>
   );
