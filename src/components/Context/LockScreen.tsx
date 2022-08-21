@@ -1,5 +1,6 @@
 import { useState } from "react";
 import desktop from "../../assets/images/desktop.jpg";
+import { IoArrowForwardSharp } from "react-icons/io5";
 
 interface Props {
   handleAppContext: () => void;
@@ -30,15 +31,21 @@ const LockScreen = ({ handleAppContext }: Props) => {
         src={desktop}
         alt="user icon"
       ></img>
-      <form onSubmit={submit}>
-        <input
-          className=" w-50 h-8 flex rounded-2xl text-center"
-          type="text"
-          onChange={handleOnChange}
-          placeholder="Enter Password"
-        ></input>
-        <button>Log in</button>
+      <h1 className="text-2xl text-white">Admin</h1>
+      <form className="block" onSubmit={submit}>
+        <div className="w-52 h-9 flex flex-row items-center justify-between bg-white rounded-2xl p-2">
+          <input
+            className="text-sm border-none bg-transparent outline-none p-2"
+            type="text"
+            onChange={handleOnChange}
+            placeholder="Enter Password"
+          ></input>
+          <button className="w-7 h-7 flex justify-center items-center border-2 border-solid rounded-full">
+            <IoArrowForwardSharp />
+          </button>
+        </div>
       </form>
+      <p className="text-xs text-white">Touch ID or Enter Password</p>
     </div>
   );
 };
