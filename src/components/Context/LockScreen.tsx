@@ -40,7 +40,7 @@ const LockScreen = ({ handleAppContext }: Props) => {
             onChange={handleOnChange}
             placeholder="Enter Password"
           ></input>
-          <div className="w-1/6">
+          <div className="w-1/6 flex justify-end">
             <button className="w-7 h-7 flex justify-center items-center border-2 border-solid rounded-full">
               <IoArrowForwardSharp />
             </button>
