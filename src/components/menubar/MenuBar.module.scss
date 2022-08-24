@@ -4,10 +4,10 @@
     display: flex;
     background-color: #FFFFFF;
     height: 24px;
-    opacity: 0.9;
     color: black;
     padding: 0 14px;
     position: relative;
+    z-index: 1;
 }
 
 .time {

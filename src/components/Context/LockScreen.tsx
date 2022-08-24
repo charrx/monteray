@@ -35,14 +35,16 @@ const LockScreen = ({ handleAppContext }: Props) => {
       <form className="block" onSubmit={submit}>
         <div className="w-52 h-9 flex flex-row items-center justify-between bg-white rounded-2xl p-2">
           <input
-            className="text-sm border-none bg-transparent outline-none p-2"
-            type="text"
+            className="w-5/6 text-sm border-none bg-transparent outline-none p-2"
+            type="password"
             onChange={handleOnChange}
             placeholder="Enter Password"
           ></input>
-          <button className="w-7 h-7 flex justify-center items-center border-2 border-solid rounded-full">
-            <IoArrowForwardSharp />
-          </button>
+          <div className="w-1/6">
+            <button className="w-7 h-7 flex justify-center items-center border-2 border-solid rounded-full">
+              <IoArrowForwardSharp />
+            </button>
+          </div>
         </div>
       </form>
       <p className="text-xs text-white">Touch ID or Enter Password</p>

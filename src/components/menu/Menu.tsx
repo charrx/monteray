@@ -8,10 +8,10 @@ interface Props {
 const Menu = ({ isOpen, handleAppContext }: Props) => {
   return (
     <div className={`switch ${isOpen ? styles.menu : styles.hidden}`}>
-      <p>About this mac</p>
+      <p className="capitalize">About this mac</p>
       <hr></hr>
       <button onClick={handleAppContext}>
-        <p>Lock screen</p>
+        <p className="capitalize">Lock screen</p>
       </button>
     </div>
   );
