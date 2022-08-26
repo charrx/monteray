@@ -1,3 +1,5 @@
+import styles from "../../styles/DockItem.module.scss";
+
 interface Props {
   icon: string;
   handleDockItem?: () => void;
@@ -7,7 +9,7 @@ const DockItem = ({ icon, handleDockItem }: Props) => {
   return (
     <div>
       <button onClick={handleDockItem}>
-        <img className="w-10 h-10" src={icon} alt="icon"></img>
+        <img className={styles.dock_item_icon} src={icon} alt="icon"></img>
       </button>
     </div>
   );
