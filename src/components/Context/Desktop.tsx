@@ -2,7 +2,7 @@ import { useReducer } from "react";
 import Dock from "../Dock/Dock";
 import Finder from "../Finder/Finder";
 import MenuBar from "../Menubar/MenuBar";
-import styles from "../../styles.Desktop.module.scss";
+import styles from "../../styles/Desktop.module.scss";
 
 interface Props {
   handleAppContext: () => void;
