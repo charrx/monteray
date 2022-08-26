@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useReducer } from "react";
 import Dock from "../Dock/Dock";
 import Finder from "../Finder/Finder";
 import MenuBar from "../Menubar/MenuBar";
@@ -9,17 +9,16 @@ interface Props {
 }
 
 const Desktop = ({ handleAppContext }: Props) => {
-  const [isFinderOpen, setIsFinderOpen] = useState(false);
-
-  const handleOpenFinder = () => {
-    setIsFinderOpen(true);
-  };
+  const [finderStatus, setFinderStatus] = useReducer(
+    (finderStatus) => !finderStatus,
+    false
+  );
 
   return (
     <div className={styles.desktop_container}>
       <MenuBar handleAppContext={handleAppContext}></MenuBar>
-      {isFinderOpen && <Finder />}
-      <Dock handleOpenFinder={handleOpenFinder}></Dock>
+      {!finderStatus && <Finder />}
+      <Dock handleOpenFinder={setFinderStatus}></Dock>
     </div>
   );
 };
