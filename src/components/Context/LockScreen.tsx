@@ -1,13 +1,14 @@
 import { useState } from "react";
 import desktop from "../../assets/images/desktop.jpg";
 import { IoArrowForwardSharp } from "react-icons/io5";
+import styles from "../../styles/Lockscreen.module.scss";
 
 interface Props {
   handleAppContext: () => void;
 }
 
 const LockScreen = ({ handleAppContext }: Props) => {
-  const adminPassword = "admin"; // This can be changes to whatever you want.
+  const adminPassword = "admin"; // This can be changed to whatever you want.
   const [password, setPassword] = useState("");
   const [isInvalidForm, setIsInvalidForm] = useState(false);
 
@@ -25,29 +26,25 @@ const LockScreen = ({ handleAppContext }: Props) => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col gap-4 items-center justify-center bg-[url('./assets/images/lockscreen.jpg')] bg-center bg-no-repeat bg-cover overflow-hidden">
-      <img
-        className="w-40 h-40 rounded-full"
-        src={desktop}
-        alt="user icon"
-      ></img>
-      <h1 className="text-2xl text-white">Admin</h1>
+    <div className={styles.lockscreen_container}>
+      <img className={styles.user_img} src={desktop} alt="user icon"></img>
+      <h1 className={styles.user_name}>Admin</h1>
       <form className="block" onSubmit={submit}>
-        <div className="w-52 h-9 flex flex-row items-center justify-between bg-white rounded-2xl p-2">
+        <div className={styles.login_container}>
           <input
-            className="w-5/6 text-sm border-none bg-transparent outline-none p-2"
+            className={styles.login_input_field}
             type="password"
             onChange={handleOnChange}
             placeholder="Enter Password"
           ></input>
-          <div className="w-1/6 flex justify-end">
-            <button className="w-7 h-7 flex justify-center items-center border-2 border-solid rounded-full">
+          <div className={styles.login_button_container}>
+            <button className={styles.login_button}>
               <IoArrowForwardSharp />
             </button>
           </div>
         </div>
       </form>
-      <p className="text-xs text-white">Touch ID or Enter Password</p>
+      <p className={styles.login_info_text}>Touch ID or Enter Password</p>
     </div>
   );
 };
