@@ -1,3 +1,5 @@
+@import 'src/theme/variables.scss';
+
 .finder_window_container{
     display: flex;
     flex-direction: row;
@@ -13,7 +15,7 @@
     display: flex;
     width: 9rem;
     height: 100%;
-    background-color: grey;
+    background-color: $finder-window;
     border-top-left-radius: 0.75rem;
     border-bottom-left-radius: 0.75rem;
 }
@@ -27,20 +29,20 @@
 .action_button_close {
     width: 0.75rem;
     height: 0.75rem;
-    background-color: red;
+    background-color: $action-btn-close;
     border-radius: 50%;
 }
 
 .action_button_minimize {
     width: 0.75rem;
     height: 0.75rem;
-    background-color: yellow;
+    background-color: $action-btn-minimize;
     border-radius: 50%;
 }
 
 .action_button_expand {
     width: 0.75rem;
     height: 0.75rem;
-    background-color: green;
+    background-color: $action-btn-expand;
     border-radius: 50%;
 }
