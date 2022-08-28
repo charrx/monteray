@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import formatDate from "../utils/formatDate";
+import formatDate from "../../utils/formatDate";
 
 const Clock = () => {
   const [date, setDate] = useState(formatDate(new Date()));
