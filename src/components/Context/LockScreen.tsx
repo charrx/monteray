@@ -10,16 +10,14 @@ interface Props {
 const LockScreen = ({ handleAppContext }: Props) => {
   const adminPassword = "admin"; // This can be changed to whatever you want.
   const [password, setPassword] = useState("");
-  const [isInvalidForm, setIsInvalidForm] = useState(false);
 
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setPassword(value);
   };
 
-  const handleFormValidation = () => {};
-
   const submit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (password === adminPassword) {
       handleAppContext();
     }
@@ -29,13 +27,14 @@ const LockScreen = ({ handleAppContext }: Props) => {
     <div className={styles.lockscreen_container}>
       <img className={styles.user_img} src={desktop} alt="user icon"></img>
       <h1 className={styles.user_name}>Admin</h1>
-      <form className="block" onSubmit={submit}>
+      <form onSubmit={submit}>
         <div className={styles.login_container}>
           <input
             className={styles.login_input_field}
             type="password"
             onChange={handleOnChange}
             placeholder="Enter Password"
+            autoFocus
           ></input>
           <div className={styles.login_button_container}>
             <button className={styles.login_button}>
