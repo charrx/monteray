@@ -17,7 +17,7 @@ const Desktop = ({ handleAppContext }: Props) => {
   return (
     <div className={styles.desktop_container}>
       <MenuBar handleAppContext={handleAppContext}></MenuBar>
-      {!finderStatus && <Finder />}
+      {finderStatus && <Finder />}
       <Dock handleOpenFinder={setFinderStatus}></Dock>
     </div>
   );
