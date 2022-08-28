@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import styles from "./MenuBar.module.scss";
+import styles from "../../styles/MenuBar.module.scss";
 import svg from "../../assets/images/appleicon.svg";
 import Menu from "../Menu/Menu";
 import Clock from "../Clock";

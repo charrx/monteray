@@ -1,4 +1,4 @@
-import styles from "./Menu.module.scss";
+import styles from "../../styles/Menu.module.scss";
 
 interface Props {
   isOpen: boolean;
