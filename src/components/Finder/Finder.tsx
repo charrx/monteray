@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Draggable from "react-draggable";
 import styles from "../../styles/Finder.module.scss";
+import ActionButtons from "../ActionButtons";
 
 const Finder = () => {
   //   If running in React Strict mode, ReactDOM.findDOMNode() is deprecated.
@@ -12,11 +13,7 @@ const Finder = () => {
     <Draggable defaultPosition={{ x: 50, y: 50 }} nodeRef={nodeRef}>
       <div className={styles.finder_window_container} ref={nodeRef}>
         <div className={styles.finder_window_header}>
-          <div className={styles.action_buttons_container}>
-            <button className={styles.action_button_close}></button>
-            <button className={styles.action_button_minimize}></button>
-            <button className={styles.action_button_expand}></button>
-          </div>
+          <ActionButtons />
         </div>
       </div>
     </Draggable>
