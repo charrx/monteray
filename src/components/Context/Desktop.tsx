@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import Dock from "../Dock/Dock";
+// import Dock from "../Dock/Dock";
 import Finder from "../Finder/Finder";
 import MenuBar from "../Menubar/MenuBar";
 import styles from "../../styles/Desktop.module.scss";
@@ -28,7 +28,7 @@ const Desktop = ({ handleAppContext }: Props) => {
       ></MenuBar>
       {aboutThisMacStatus && <AboutThisMac />}
       {finderStatus && <Finder />}
-      <Dock handleOpenFinder={setFinderStatus}></Dock>
+      {/* <Dock handleOpenFinder={setFinderStatus}></Dock> */}
     </div>
   );
 };
