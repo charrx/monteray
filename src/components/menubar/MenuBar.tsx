@@ -6,9 +6,10 @@ import Clock from "./Clock";
 
 interface Props {
   handleAppContext: () => void;
+  handleOpenAboutThisMac: () => void;
 }
 
-const MenuBar = ({ handleAppContext }: Props) => {
+const MenuBar = ({ handleAppContext, handleOpenAboutThisMac }: Props) => {
   const [isOpen, setIsOpen] = useReducer((isOpen) => !isOpen, false);
 
   return (
@@ -18,7 +19,11 @@ const MenuBar = ({ handleAppContext }: Props) => {
           <img src={svg} alt="apple logo"></img>
         </button>
 
-        <Menu isOpen={isOpen} handleAppContext={handleAppContext} />
+        <Menu
+          isOpen={isOpen}
+          handleAppContext={handleAppContext}
+          handleOpenAboutThisMac={handleOpenAboutThisMac}
+        />
       </div>
       <div className={styles.date_container}>
         <Clock />
