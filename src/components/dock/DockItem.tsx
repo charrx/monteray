@@ -8,7 +8,7 @@ interface Props {
 const DockItem = ({ icon, handleDockItem }: Props) => {
   return (
     <div>
-      <button onClick={handleDockItem}>
+      <button className={styles.dock_item_btn} onClick={handleDockItem}>
         <img className={styles.dock_item_icon} src={icon} alt="icon"></img>
       </button>
     </div>

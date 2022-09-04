@@ -14,6 +14,7 @@ const Dock = ({ handleOpenFinder }: Props) => {
       <div className={styles.dock_item_container}>
         <DockItem icon={finder} handleDockItem={handleOpenFinder} />
         <DockItem icon={spotify} />
+        <div className={styles.seperator}></div>
         <DockItem icon={trashcan} />
       </div>
     </div>
