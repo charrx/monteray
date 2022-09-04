@@ -9,10 +9,10 @@ interface Props {
 const Menu = ({ isOpen, handleAppContext, handleOpenAboutThisMac }: Props) => {
   return (
     <div className={`switch ${isOpen ? styles.menu : styles.hidden}`}>
-      <button onClick={handleOpenAboutThisMac}>
+      <button className={styles.btn_about} onClick={handleOpenAboutThisMac}>
         <p className="capitalize">About this mac</p>
       </button>
-      <hr></hr>
+      <hr className={styles.divider}></hr>
       <button onClick={handleAppContext}>
         <p className="capitalize">Lock screen</p>
       </button>
