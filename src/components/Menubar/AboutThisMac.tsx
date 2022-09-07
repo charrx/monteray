@@ -4,7 +4,11 @@ import Draggable from "react-draggable";
 import styles from "../../styles/AboutThisMac.module.scss";
 import ActionButtons from "../ActionButtons";
 
-const AboutThisMac = () => {
+interface Props {
+  closeWindowHandler: () => void;
+}
+
+const AboutThisMac = ({ closeWindowHandler }: Props) => {
   //   If running in React Strict mode, ReactDOM.findDOMNode() is deprecated.
   //   Unfortunately, in order for <Draggable> to work properly, we need raw access
   //   to the underlying DOM node. If you want to avoid the warning, pass a `nodeRef`.
@@ -13,7 +17,7 @@ const AboutThisMac = () => {
     <Draggable defaultPosition={{ x: 400, y: 200 }} nodeRef={nodeRef}>
       <div className={styles.container} ref={nodeRef}>
         <div className={styles.header}>
-          <ActionButtons />
+          <ActionButtons closeWindowHandler={closeWindowHandler} />
         </div>
         <div className={styles.content_container}>
           <div className={styles.logo_container}>

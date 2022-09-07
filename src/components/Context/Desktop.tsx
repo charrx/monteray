@@ -26,8 +26,10 @@ const Desktop = ({ handleAppContext }: Props) => {
         handleAppContext={handleAppContext}
         handleOpenAboutThisMac={setAboutThisMacStatus}
       ></MenuBar>
-      {aboutThisMacStatus && <AboutThisMac />}
-      {finderStatus && <Finder />}
+      {aboutThisMacStatus && (
+        <AboutThisMac closeWindowHandler={setAboutThisMacStatus} />
+      )}
+      {finderStatus && <Finder closeWindowHandler={setFinderStatus} />}
       <Dock handleOpenFinder={setFinderStatus}></Dock>
     </div>
   );
