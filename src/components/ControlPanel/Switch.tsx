@@ -1,4 +1,4 @@
-const ControlPanel = () => {
+const Switch = () => {
   return (
     <svg
       width="22"
@@ -14,4 +14,4 @@ const ControlPanel = () => {
     </svg>
   );
 };
-export default ControlPanel;
+export default Switch;
