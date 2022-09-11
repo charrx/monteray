@@ -1,0 +1,23 @@
+@import 'src/theme/variables.scss';
+
+.circular_button {
+    display: flex;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: #E1E1E0;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular_button svg path {
+    fill: $black;
+}
+
+.active {
+    background-color: $highligher;
+}
+
+.active svg path {
+    fill: $white;
+}
