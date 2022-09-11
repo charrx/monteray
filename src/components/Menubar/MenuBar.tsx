@@ -3,8 +3,8 @@ import styles from "../../styles/MenuBar.module.scss";
 import svg from "../../assets/images/appleicon.svg";
 import Menu from "./Menu";
 import Clock from "./Clock";
-import Switch from "../ControlPanel/Switch";
-import ControlPanel from "../ControlPanel";
+import ControlPanel from "./ControlPanel";
+import { Switch } from "./Icons";
 
 interface Props {
   handleAppContext: () => void;
@@ -32,7 +32,7 @@ const MenuBar = ({ handleAppContext, handleOpenAboutThisMac }: Props) => {
           <button className={styles.rightside_icon}>
             <Switch />
           </button>
-          {/* <ControlPanel /> */}
+          <ControlPanel />
         </div>
         <div className={styles.date_container}>
           <Clock />
