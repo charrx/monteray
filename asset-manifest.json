@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/monteray/static/css/main.160aeb65.css",
-    "main.js": "/monteray/static/js/main.8e5ee53c.js",
+    "main.css": "/monteray/static/css/main.42770df5.css",
+    "main.js": "/monteray/static/js/main.80db6fe6.js",
     "static/media/lockscreen.jpg": "/monteray/static/media/lockscreen.1096c5648550b5fc15b2.jpg",
     "static/media/desktop.jpg": "/monteray/static/media/desktop.c680f25c346dfc77f3c9.jpg",
     "static/media/finder.svg": "/monteray/static/media/finder.6bd890d3e21c388baa91bbd4c8f30d4e.svg",
@@ -9,11 +9,11 @@
     "static/media/spotify.svg": "/monteray/static/media/spotify.f4f46b18cff2ba50c2becb90f06f425f.svg",
     "static/media/appleicon.svg": "/monteray/static/media/appleicon.62171e3b6d072008e2eed91d03a29c92.svg",
     "index.html": "/monteray/index.html",
-    "main.160aeb65.css.map": "/monteray/static/css/main.160aeb65.css.map",
-    "main.8e5ee53c.js.map": "/monteray/static/js/main.8e5ee53c.js.map"
+    "main.42770df5.css.map": "/monteray/static/css/main.42770df5.css.map",
+    "main.80db6fe6.js.map": "/monteray/static/js/main.80db6fe6.js.map"
   },
   "entrypoints": [
-    "static/css/main.160aeb65.css",
-    "static/js/main.8e5ee53c.js"
+    "static/css/main.42770df5.css",
+    "static/js/main.80db6fe6.js"
   ]
 }
