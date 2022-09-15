@@ -6,13 +6,14 @@ export enum OptionType {
   WIFI = "wifi",
   BLUETOOTH = "bluetooth",
   AIRDROP = "airdrop",
+  DARKMODE = "darkmode",
 }
 
 export interface OptionProps {
   type: OptionType;
   name: string;
-  activeText: string;
-  inactiveText: string;
+  activeText?: string;
+  inactiveText?: string;
 }
 
 const Option = ({ type, name, activeText, inactiveText }: OptionProps) => {
