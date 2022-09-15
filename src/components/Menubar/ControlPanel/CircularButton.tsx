@@ -1,7 +1,6 @@
-import { Wifi } from "../Icons";
+import { Airdrop, Wifi, Moon } from "../Icons";
 import styles from "../../../styles/CircularButton.module.scss";
 import { OptionType } from "./Option";
-import Airdrop from "../Icons/Airdrop";
 
 interface Props {
   type: OptionType;
@@ -13,6 +12,7 @@ const CircularButton = ({ type, isActive }: Props) => {
     [OptionType.WIFI]: <Wifi />,
     [OptionType.BLUETOOTH]: <Wifi />,
     [OptionType.AIRDROP]: <Airdrop />,
+    [OptionType.DARKMODE]: <Moon />,
   };
 
   return (
