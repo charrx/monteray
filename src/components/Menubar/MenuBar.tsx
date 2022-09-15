@@ -3,6 +3,8 @@ import styles from "../../styles/MenuBar.module.scss";
 import svg from "../../assets/images/appleicon.svg";
 import Menu from "./Menu";
 import Clock from "./Clock";
+import ControlPanel from "./ControlPanel";
+import { Switch } from "./Icons";
 
 interface Props {
   handleAppContext: () => void;
@@ -14,7 +16,7 @@ const MenuBar = ({ handleAppContext, handleOpenAboutThisMac }: Props) => {
 
   return (
     <div className={styles.menubar_container}>
-      <div>
+      <div className={styles.leftside_container}>
         <button className={styles.icon} onClick={setIsOpen}>
           <img src={svg} alt="apple logo"></img>
         </button>
@@ -25,8 +27,16 @@ const MenuBar = ({ handleAppContext, handleOpenAboutThisMac }: Props) => {
           handleOpenAboutThisMac={handleOpenAboutThisMac}
         />
       </div>
-      <div className={styles.date_container}>
-        <Clock />
+      <div className={styles.rightside_container}>
+        <div className={styles.icon_container}>
+          <button className={styles.rightside_icon}>
+            <Switch />
+          </button>
+          <ControlPanel />
+        </div>
+        <div className={styles.date_container}>
+          <Clock />
+        </div>
       </div>
     </div>
   );
