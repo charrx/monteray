@@ -9,6 +9,7 @@ const formatDate = (dateToFormat: Date): string => {
   }).format(dateToFormat);
 
   const time = new Intl.DateTimeFormat("default", {
+    hour12: false,
     hour: "numeric",
     minute: "2-digit",
     second: "numeric",
