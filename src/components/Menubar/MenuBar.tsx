@@ -3,8 +3,8 @@ import styles from "../../styles/MenuBar.module.scss";
 import svg from "../../assets/images/appleicon.svg";
 import Menu from "./Menu";
 import Clock from "./Clock";
+import { Switch, Wifi } from "./Icons";
 import ControlPanel from "./ControlPanel";
-import { Switch } from "./Icons";
 
 interface Props {
   handleAppContext: () => void;
@@ -12,27 +12,42 @@ interface Props {
 }
 
 const MenuBar = ({ handleAppContext, handleOpenAboutThisMac }: Props) => {
-  const [isOpen, setIsOpen] = useReducer((isOpen) => !isOpen, false);
+  const [isMenuOpen, setIsMenuOpen] = useReducer(
+    (isMenuOpen) => !isMenuOpen,
+    false
+  );
+
+  const [isControlPanelOpen, setIsControlPanelOpen] = useReducer(
+    (isControlPanelOpen) => !isControlPanelOpen,
+    false
+  );
 
   return (
     <div className={styles.menubar_container}>
       <div className={styles.leftside_container}>
-        <button className={styles.icon} onClick={setIsOpen}>
+        <button className={styles.icon} onClick={setIsMenuOpen}>
           <img src={svg} alt="apple logo"></img>
         </button>
 
-        <Menu
-          isOpen={isOpen}
-          handleAppContext={handleAppContext}
-          handleOpenAboutThisMac={handleOpenAboutThisMac}
-        />
+        {isMenuOpen && (
+          <Menu
+            handleAppContext={handleAppContext}
+            handleOpenAboutThisMac={handleOpenAboutThisMac}
+          />
+        )}
       </div>
       <div className={styles.rightside_container}>
         <div className={styles.icon_container}>
-          <button className={styles.rightside_icon}>
+          <div>
+            <Wifi />
+          </div>
+          <button
+            className={styles.rightside_icon}
+            onClick={setIsControlPanelOpen}
+          >
             <Switch />
           </button>
-          <ControlPanel />
+          {isControlPanelOpen && <ControlPanel />}
         </div>
         <div className={styles.date_container}>
           <Clock />
