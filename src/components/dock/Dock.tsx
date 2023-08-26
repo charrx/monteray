@@ -1,8 +1,5 @@
-import trashcan from "../../assets/images/trashcan.svg";
-import spotify from "../../assets/images/spotify.svg";
-import finder from "../../assets/images/finder.svg";
 import DockItem from "./DockItem";
-import styles from "../../styles/Dock.module.scss";
+import { Finder, Spotify, Trashcan } from "../../assets/icons";
 
 interface Props {
   handleOpenFinder: () => void;
@@ -10,12 +7,12 @@ interface Props {
 
 const Dock = ({ handleOpenFinder }: Props) => {
   return (
-    <div className={styles.dock_container}>
-      <div className={styles.dock_item_container}>
-        <DockItem icon={finder} handleDockItem={handleOpenFinder} />
-        <DockItem icon={spotify} />
-        <div className={styles.seperator}></div>
-        <DockItem icon={trashcan} />
+    <div className="w-full flex content-end justify-center absolute bottom-0 mb-2 m-6">
+      <div className="flex backdrop-blur-md bg-whiteish/40 rounded-2xl p-2 border border-solid border-whiteish/50">
+        <DockItem icon={Finder} handleDockItem={handleOpenFinder} />
+        <DockItem icon={Spotify} />
+        <div className="w-px h-full bg-black/30 mx-3"></div>
+        <DockItem icon={Trashcan} />
       </div>
     </div>
   );
