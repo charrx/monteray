@@ -41,7 +41,9 @@ Monteray:
         ☐ create finder view @created(22-09-05 00:38)
     Action Buttons:
         ✔ create a component for action buttons @created(22-09-02 20:44) @done(22-09-07 23:49)
-            ☐  maybe one for action button items @created(22-09-07 23:49)
+            ☐ maybe one for action button items @created(22-09-07 23:49)
+            ☐ create clickhandler
+            ☐ create action object - props: event(close, maximize, minimize)
         ☐ make action buttons work @created(22-08-24 23:38)
             ✔ close @created(22-08-31 00:08) @done(22-09-07 23:48)
             ☐ expand @created(22-08-31 00:08)
