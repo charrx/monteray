@@ -31,22 +31,22 @@ const LockScreen = ({ handleAppContext }: Props) => {
       ></img>
       <h1 className="text-xl leading-7 text-white">Admin</h1>
       <form onSubmit={submit}>
-        <div className="w-40 h-7 flex items-center justify-between backdrop-blur-md bg-whiteish/40 rounded-2xl p-2.2">
+        <div className="w-40 h-7 flex items-center justify-between backdrop-blur-md bg-white/40 rounded-2xl p-2.2">
           <input
-            className="w-4/5 text-xs leading-5 border-none bg-transparent outline-none text-white p-2 placeholder:text-whiteish/80"
+            className="w-4/5 text-xs leading-5 border-none bg-transparent outline-none text-white p-2 placeholder:text-white/80"
             type="password"
             onChange={handleOnChange}
             placeholder="Enter Password"
             autoFocus
           ></input>
           <div className="w-1/5 flex justify-end">
-            <button className=" w-6 h-6 flex justify-center items-center text-sm border-2 border-solid border-white rounded-full text-whiteish opacity-50">
+            <button className=" w-6 h-6 flex justify-center items-center text-sm border-2 border-solid border-white rounded-full text-white opacity-50">
               <IoArrowForwardSharp />
             </button>
           </div>
         </div>
       </form>
-      <p className=" text-xs leading-4 text-whiteish">
+      <p className=" text-xs leading-4 text-white">
         Touch ID or Enter Password
       </p>
     </div>
