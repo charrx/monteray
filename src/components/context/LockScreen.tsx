@@ -1,7 +1,6 @@
 import { useState } from "react";
 import macDesktop from "../../assets/images/desktop.jpg";
 import { IoArrowForwardSharp } from "react-icons/io5";
-// import styles from "../../styles/Lockscreen.module.scss";
 
 interface Props {
   handleAppContext: () => void;
