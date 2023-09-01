@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import lockscreen from "../../assets/images/lockscreen.jpg";
 import Draggable from "react-draggable";
-import styles from "../../styles/AboutThisMac.module.scss";
 import ActionButtons from "../ActionButtons";
 
 interface Props {
@@ -14,38 +13,43 @@ const AboutThisMac = ({ closeWindowHandler }: Props) => {
   //   to the underlying DOM node. If you want to avoid the warning, pass a `nodeRef`.
   const nodeRef = useRef(null);
   return (
-    <Draggable defaultPosition={{ x: 400, y: 200 }} nodeRef={nodeRef}>
-      <div className={styles.container} ref={nodeRef}>
-        <div className={styles.header}>
+    <Draggable nodeRef={nodeRef}>
+      <div
+        className="w-[36rem] h-80 bg-windowBackground border-1 border-solid border-black/12 rounded-xl shadow-lg"
+        ref={nodeRef}
+      >
+        <div className="w-full h-10 flex items-center bg-white pl-3 rounded-t-xl shadow-sm ">
           <ActionButtons closeWindowHandler={closeWindowHandler} />
         </div>
-        <div className={styles.content_container}>
-          <div className={styles.logo_container}>
+        <div className="flex w-full h-[calc(100%-2.5rem)] items-center">
+          <div className="flex w-1/2 justify-center">
             <img
-              className={styles.monteray_logo}
+              className="w-36 h-36 rounded-full border-8 border-solid border-white shadow-lg"
               src={lockscreen}
               alt="monteray logo"
             />
           </div>
-          <div className={styles.info}>
-            <div className={styles.name_container}>
-              <p className={styles.name}>
-                <span className={styles.bold}>macOS</span> Monteray
+          <div className="w-1/2 flex flex-col gap-3">
+            <div className="flex flex-col">
+              <p className="h-fit text-2xl font-light">
+                <span className="font-semibold">macOS</span> Monteray
               </p>
-              <p className={styles.version}>version 1.0.0</p>
+              <p className=" text-xs capitalize">version 1.0.0</p>
             </div>
-            <div className={styles.info_spec_container}>
-              <p className={styles.general_info}>
-                <span className={styles.bold}>MacBook Pro (14-inch, 2021)</span>
+            <div className="text-xs">
+              <p className="flex gap-3">
+                <span className="font-semibold">
+                  MacBook Pro (14-inch, 2021)
+                </span>
               </p>
-              <p className={styles.general_info}>
-                <span className={styles.bold}>Chip</span> Apple M1 Pro
+              <p className="flex gap-3">
+                <span className="font-semibold">Chip</span> Apple M1 Pro
               </p>
-              <p className={styles.general_info}>
-                <span className={styles.bold}>Memory</span> 16 GB
+              <p className="flex gap-3">
+                <span className="font-semibold">Memory</span> 16 GB
               </p>
-              <p className={styles.general_info}>
-                <span className={styles.bold}>Serial Number</span> 0000000000
+              <p className="flex gap-3">
+                <span className="font-semibold">Serial Number</span> 0000000000
               </p>
             </div>
           </div>
