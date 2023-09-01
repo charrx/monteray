@@ -1,9 +1,8 @@
 import { useReducer } from "react";
-import styles from "../../styles/MenuBar.module.scss";
+import { Switch, Wifi } from "./icons";
 import svg from "../../assets/images/appleicon.svg";
 import Menu from "./Menu";
 import Clock from "./Clock";
-import { Switch, Wifi } from "./Icons";
 import ControlPanel from "./ControlPanel";
 
 interface Props {
@@ -23,33 +22,28 @@ const MenuBar = ({ handleAppContext, handleOpenAboutThisMac }: Props) => {
   );
 
   return (
-    <div className={styles.menubar_container}>
-      <div className={styles.leftside_container}>
-        <button className={styles.icon} onClick={setIsMenuOpen}>
-          <img src={svg} alt="apple logo"></img>
-        </button>
+    <div className="flex h-6 justify-between backdrop-blur-md bg-white/50 text-black px-3 relative z-10">
+      <button className="bg-none border-none p-0" onClick={setIsMenuOpen}>
+        <img className="flex items-center" src={svg} alt="apple logo"></img>
+      </button>
 
-        {isMenuOpen && (
-          <Menu
-            handleAppContext={handleAppContext}
-            handleOpenAboutThisMac={handleOpenAboutThisMac}
-          />
-        )}
-      </div>
-      <div className={styles.rightside_container}>
-        <div className={styles.icon_container}>
+      {isMenuOpen && (
+        <Menu
+          handleAppContext={handleAppContext}
+          handleOpenAboutThisMac={handleOpenAboutThisMac}
+        />
+      )}
+      <div className="flex items-center gap-2 text-sm">
+        <div className="flex gap-2">
           <div>
             <Wifi />
           </div>
-          <button
-            className={styles.rightside_icon}
-            onClick={setIsControlPanelOpen}
-          >
+          <button className="flex items-center" onClick={setIsControlPanelOpen}>
             <Switch />
           </button>
-          {isControlPanelOpen && <ControlPanel />}
+          {/* {isControlPanelOpen && <ControlPanel />} */}
         </div>
-        <div className={styles.date_container}>
+        <div className="flex text-sm">
           <Clock />
         </div>
       </div>
