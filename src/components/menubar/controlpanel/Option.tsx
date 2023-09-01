@@ -1,13 +1,6 @@
 import { useReducer } from "react";
-import styles from "../../../styles/Option.module.scss";
 import CircularButton from "./CircularButton";
-
-export enum OptionType {
-  WIFI = "wifi",
-  BLUETOOTH = "bluetooth",
-  AIRDROP = "airdrop",
-  DARKMODE = "darkmode",
-}
+import { OptionType } from "./OptionType";
 
 export interface OptionProps {
   type: OptionType;
@@ -20,13 +13,11 @@ const Option = ({ type, name, activeText, inactiveText }: OptionProps) => {
   const [isActive, setIsActive] = useReducer((isActive) => !isActive, true);
 
   return (
-    <div className={styles.option_container} onClick={setIsActive}>
+    <div className="flex items-center gap-2" onClick={setIsActive}>
       <CircularButton type={type} isActive={isActive} />
-      <div className={styles.option_info_container}>
-        <p className={styles.option_name}>{name}</p>
-        <p className={styles.option_status}>
-          {isActive ? activeText : inactiveText}
-        </p>
+      <div className="flex flex-col">
+        <p className="text-xs font-bold">{name}</p>
+        <p className="text-xxs">{isActive ? activeText : inactiveText}</p>
       </div>
     </div>
   );
