@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import formatDate from "../../utils/formatDate";
 
 const Clock = () => {
-  const [date, setDate] = useState(formatDate(new Date()));
+  const [date, setDate] = useState(() => formatDate(new Date()));
 
   useEffect(() => {
     const refreshTime = setInterval(() => {
@@ -13,7 +13,7 @@ const Clock = () => {
     return () => {
       clearInterval(refreshTime);
     };
-  }, [date]);
+  }, []);
 
   return <>{date}</>;
 };
