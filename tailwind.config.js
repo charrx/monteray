@@ -17,8 +17,8 @@ export default {
         xxs: ["0.625rem", "0.75rem"],
       },
       backgroundImage: {
-        "mac-desktop": "url('./src/assets/images/desktop.jpg')",
-        "mac-lockscreen": "url('./src/assets/images/lockscreen.jpg')",
+        "mac-desktop": "url('./assets/images/desktop.jpg')",
+        "mac-lockscreen": "url('./assets/images/lockscreen.jpg')",
       },
     },
   },
