@@ -15,7 +15,7 @@ const AboutThisMac = ({ closeWindowHandler }: Props) => {
   return (
     <Draggable nodeRef={nodeRef}>
       <div
-        className="w-[36rem] h-80 bg-windowBackground border-1 border-solid border-black/12 rounded-xl shadow-lg"
+        className="w-[36rem] h-80 bg-windowBackground border border-solid border-black/12 rounded-xl shadow-lg"
         ref={nodeRef}
       >
         <div className="w-full h-10 flex items-center bg-white pl-3 rounded-t-xl shadow-sm ">
