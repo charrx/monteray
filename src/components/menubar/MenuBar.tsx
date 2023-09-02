@@ -3,7 +3,7 @@ import { Switch, Wifi } from "./icons";
 import svg from "../../assets/images/appleicon.svg";
 import Menu from "./Menu";
 import Clock from "./Clock";
-import ControlPanel from "./ControlPanel";
+import ControlPanel from "./controlpanel/ControlPanel";
 
 interface Props {
   handleAppContext: () => void;
@@ -41,7 +41,7 @@ const MenuBar = ({ handleAppContext, handleOpenAboutThisMac }: Props) => {
           <button className="flex items-center" onClick={setIsControlPanelOpen}>
             <Switch />
           </button>
-          {/* {isControlPanelOpen && <ControlPanel />} */}
+          {isControlPanelOpen && <ControlPanel />}
         </div>
         <div className="flex text-sm">
           <Clock />
