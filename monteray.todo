@@ -1,0 +1,51 @@
+'Cmd/Ctrl+Enter' // Triggers `Todo: Toggle Box`
+'Alt+Enter' // Triggers `Todo: Toggle Box`
+'Alt+D' // Triggers `Todo: Toggle Done`
+'Alt+C' // Triggers `Todo: Toggle Cancelled`
+'Alt+S' // Triggers `Todo: Toggle Start`
+'Cmd/Ctrl+Shift+A' // Triggers  `Todo: Archive`
+
+Monteray:
+    ☐ convert back to scss files @created(22-08-26 01:00)
+    ☐ minimize images @created(22-08-31 00:08)
+    Maintenance:
+        ✔ create a github action to deploy githup pages on merge/push to main @created(22-09-05 00:20) @done(22-09-05 00:20)
+        ☐ create a build check on commits to PR @created(22-09-05 00:20)
+    Dark/Light mode:
+        ☐ add light/dark mode button @created(22-08-31 00:16)
+        ☐ config theme @created(22-09-02 20:53)
+        ☐ add dark variables - since light mode is default @created(22-09-02 20:53)
+    Menubar:
+        ✔ add control panel icon @created(22-08-31 00:16) @done(22-09-10 23:11)
+        Control Panel:
+            ☐ create control panel box @created(22-09-08 10:22)
+            ✔ add wifi icon @created(22-08-31 00:16) @done(22-09-10 23:11)
+            ☐ turn wifi on/off @created(22-08-31 00:16)
+                ☐ maybe chrome game on wifi off?? @created(22-08-31 00:17)
+    Login Screen:
+        ✔ fix arrow button placement on login screen @created(22-08-24 19:51) @done(22-08-25 00:01)
+        ☐ hide input field when loading page - show when in focus @created(22-08-25 00:01)
+        ☐ create cancel button on the bottom @created(22-08-24 23:35)
+        ☐ handle form validation @created(22-08-25 00:02) - basically just wiggle when incorrect password
+    About This Mac:
+        ✔ create the box @created(22-08-24 23:38) @done(22-09-05 00:31)
+        ✔ make it draggable @created(22-09-02 20:38) @done(22-09-05 00:31)
+        ✔ display information about the mac @created(22-09-05 00:31) @done(22-09-05 00:31)
+        ☐ display information about myself @created(22-08-24 23:38) - alternatively create a "about this developer"
+    About This Developer:
+        ☐ ?? maybe @created(22-08-25 00:02)
+    Dock:
+        Sportify:
+            ☐ add spotify connection @created(22-08-24 23:37)
+    Finder:
+        ☐ create finder view @created(22-09-05 00:38)
+    Action Buttons:
+        ✔ create a component for action buttons @created(22-09-02 20:44) @done(22-09-07 23:49)
+            ☐ maybe one for action button items @created(22-09-07 23:49)
+            ☐ create clickhandler
+            ☐ create action object - props: event(close, maximize, minimize)
+        ☐ make action buttons work @created(22-08-24 23:38)
+            ✔ close @created(22-08-31 00:08) @done(22-09-07 23:48)
+            ☐ expand @created(22-08-31 00:08)
+            ☐ minimize @created(22-08-31 00:08)
+            ☐ add small icons in action buttons @created(22-08-24 23:41)
