@@ -1,9 +1,8 @@
 import { useReducer } from "react";
-import Dock from "../Dock/Dock";
-import Finder from "../Finder/Finder";
-import MenuBar from "../Menubar/MenuBar";
-import styles from "../../styles/Desktop.module.scss";
-import AboutThisMac from "../Menubar/AboutThisMac";
+import Dock from "../dock/Dock";
+import Finder from "../finder/Finder";
+import MenuBar from "../menubar/MenuBar";
+import AboutThisMac from "../menubar/AboutThisMac";
 
 interface Props {
   handleAppContext: () => void;
@@ -21,7 +20,7 @@ const Desktop = ({ handleAppContext }: Props) => {
   );
 
   return (
-    <div className={styles.desktop_container}>
+    <div className="w-full h-full bg-mac-desktop bg-center bg-no-repeat bg-cover overflow-hidden relative">
       <MenuBar
         handleAppContext={handleAppContext}
         handleOpenAboutThisMac={setAboutThisMacStatus}
